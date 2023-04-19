@@ -53,22 +53,22 @@ namespace AccutraxStatements
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                      da.Fill(dt);
                     // create a new DataGridView
-                    DataGridView dgvAllStatements = new DataGridView();
+                    //DataGridView dgvAllStatements = new DataGridView();
 
                     // bind the columns of the DataGridView to the columns of the DataTable
                     dgvAllStatements.AutoGenerateColumns = false;
                         dgvAllStatements.DataSource = dt;
 
                     // create columns for the DataGridView
-                    DataGridViewTextBoxColumn id = new DataGridViewTextBoxColumn();
-                    id.DataPropertyName = "id";
-                    id.HeaderText = "ID";
-                    dgvAllStatements.Columns.Add(id);
+                    //DataGridViewTextBoxColumn id = new DataGridViewTextBoxColumn();
+                    //id.DataPropertyName = "id";
+                    //id.HeaderText = "ID";
+                    //dgvAllStatements.Columns.Add(id);
 
-                    DataGridViewTextBoxColumn Terms = new DataGridViewTextBoxColumn();
-                    Terms.DataPropertyName = "Terms";
-                    Terms.HeaderText = "Statements";
-                    dgvAllStatements.Columns.Add(Terms);
+                    //DataGridViewTextBoxColumn Terms = new DataGridViewTextBoxColumn();
+                    //Terms.DataPropertyName = "Terms";
+                    //Terms.HeaderText = "Statements";
+                    //dgvAllStatements.Columns.Add(Terms);
                  
                
                     con.Close();
@@ -148,14 +148,18 @@ namespace AccutraxStatements
         {
             if (cmbProject.SelectedIndex > 0)
             {
-                loadProducts(int.Parse(cmbProject.SelectedIndex.ToString()));
+                loadProducts(int.Parse(cmbProject.SelectedValue .ToString()));
                
             }
         }
 
         private void cmbProduct_SelectedIndexChanged(object sender, EventArgs e)
         {
-            loadAllStatements();
+            if (cmbProduct.Text !="Select Product")
+            {
+                loadAllStatements();
+            }
+           
         }
     }
 }
