@@ -54,17 +54,17 @@
             // cmbProduct
             // 
             this.cmbProduct.FormattingEnabled = true;
-            this.cmbProduct.Location = new System.Drawing.Point(271, 128);
+            this.cmbProduct.Location = new System.Drawing.Point(138, 128);
             this.cmbProduct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbProduct.Name = "cmbProduct";
-            this.cmbProduct.Size = new System.Drawing.Size(311, 28);
+            this.cmbProduct.Size = new System.Drawing.Size(444, 28);
             this.cmbProduct.TabIndex = 0;
             this.cmbProduct.SelectedIndexChanged += new System.EventHandler(this.cmbProduct_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(271, 102);
+            this.label1.Location = new System.Drawing.Point(147, 95);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 20);
             this.label1.TabIndex = 1;
